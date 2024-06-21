@@ -13,7 +13,7 @@
 </head>
 <body>
 <main>
-    <article id="pocahontas_wallpaper" data-url="https://vm.tiktok.com/ZMr2wXbBk/">
+    <article id="pocahontas_wallpaper">
         <header id="title_big">
             <h1 id="title_big_title" data-title="LOFCITO">LOFCITO</h1>
         </header>
@@ -29,42 +29,18 @@
   
 </body>
 <script>
-    var tapCount = 0;
-    
     document.getElementById('pocahontas_wallpaper').addEventListener('click', function() {
-        tapCount++;
-
-        // Mostrar mensaje personalizado con SweetAlert2
-     if (tapCount === 1) {
         Swal.fire({
-            title: '¡TOCASTE LA PANTALLA LOFCITO!',
-            text: '¡AHORA DEBERÁS TOCARLA 25 VECES MÁS, PARA LOS 26 AÑOS QUE CUMPLES!',
-            icon: 'info',
-            confirmButtonText: 'OK',
-            customClass: {
-                popup: 'my-swal-popup', // Clase personalizada para el estilo
-            }
-        });
-    }
-
-        // Mostrar mensaje de SweetAlert2 al alcanzar el 26to toque
-        if (tapCount === 26) {
-            var url = this.getAttribute('data-url');
-            if (url) {
-                Swal.fire({
                     title: "¡FELICES 26!",
-                    text: "¡TE DESEO LO MEJOR DEL MUNDO! AHORA TE REDIRECCIONARA A UN SITIO...",
-                    icon: "success",
+                    text: "¡TE DESEO LO MEJOR DEL MUNDO!",
                     showCancelButton: false, // No mostrar botón de cancelar
                     confirmButtonText: 'OK',
                     allowOutsideClick: false // Evitar cerrar el modal haciendo clic fuera de él
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = url; // Redirigir solo si se confirma el modal
+                        window.location.href = "https://vm.tiktok.com/ZMr2wXbBk/"; // Redirigir solo si se confirma el modal
                     }
                 });
-            }
-        }
     });
 </script>
 </html>
